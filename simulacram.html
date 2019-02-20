@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en"> 
+    <head>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" href="src-css/skeleton.css">
+        <script src="./src-js/jquery-3.3.1.js"></script>
+        <style>
+         .navbar{
+
+             background-color:white;
+             position:fixed;
+             top:0;
+             right:0;
+             float:right;
+
+         }
+         
+         
+        </style>
+        
+    </head>
+    <body>
+        <div class="row">
+            <div class="three columns">
+                <div class="navbar">
+
+                    <table>
+
+                        <tr>
+                            <td>
+                                previous
+                                
+                            </td>
+                            <td>
+                                up
+                                
+                            </td>
+                            <td>
+                                next
+                                
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <a href="./about.html" class="button">About</a>
+                            </td>
+                        </tr>
+                        
+                        <tr>
+
+                            <td colspan="3">
+                                <a href="./forum.html" class="button">Help Forum</a>
+                            </td>
+                        </tr>
+                        <tr>
+
+                            <td colspan="3">
+                                <a href="./contact.html" class="button">Contact</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <a href="./language.html" class="button">Language</a>
+                            </td>
+                        </tr>
+
+                        
+                        
+                    </table>
+                </div>
+            </div>
+            
+            
+            <div class="container nine columns">
+                <h1>Some photo effects</h1> 
+                <form action="switch_effectsOneImage.php" method="get">
+                    <table width="100%">
+                        <tr>
+                            <td width="25%">
+                     Effects available
+                            </td>
+                            <td width="25%">
+           
+                                <div>
+                                    <select id="availableEffects" name="availableEffects">
+                                        <option selected="selected">None</option>
+                                        <option value="Clouds">Clouds</option>
+                                        <option value="fontOver">Font over changing colors</option>
+                                        <option value="multipleCoordinate">Multiple coordinate effects</option>
+                                    </select>
+                                </div>         
+                                
+
+
+                                </select>
+                            </td>
+                            <td width="25%">
+                                <!-- ------------------Ardie hides element------------------ -->
+                                <input hidden type="text" id="photoSelectedOne" name="photoSelectedOne">
+                            </td>
+                            <td width="25%">
+                                <input type="submit" class="button button-active" value="process effects (PHP)"  id="oneEffectOnly"/>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+                    <form method="get" action="sim_animation_slideshow.php">
+                    <table>
+                        <tr>
+                            <td>
+
+                                <select hidden id="photoSelected" name="photoSelected[]" multiple>
+                            </td>
+                            
+                        </tr>
+                        
+                    </table>
+
+                        <table id="photoSelectedShown">
+                        <tr>
+                            
+                        </tr>
+                        <tr>
+                            <td>
+                                <input class="button button-primary" type="submit" value="ANIMATION">
+                            </td>
+                        </tr>
+                        </table>
+                        <h5>Select multiple photos for animation (just a jQuery), and single photo for impressive cloud</br>
+                            function, or impressive script that searched for primary and secondary color (most impressive script
+                            I made here...). Refresh page to start over...
+                        </h5>
+                    <table>
+                        <tr>
+                            <td class="photo"><img src="./src-img/thumbnails/pic_0.jpg" /></td>
+                            <td class="photo"><img src="./src-img/thumbnails/pic_1.jpg" /></td>
+                            <td class="photo"><img src="./src-img/thumbnails/pic_2.jpg" /></td>
+                            <td class="photo"><img src="./src-img/thumbnails/pic_3.jpg" /></td>
+                            <td class="photo"><img src="./src-img/thumbnails/pic_4.jpg" /></td>
+                            <td class="photo"><img src="./src-img/thumbnails/pic_5.jpg" /></td>
+                            <td class="photo"><img src="./src-img/thumbnails/pic_6.jpg" /></td>
+                            <td class="photo"><img src="./src-img/thumbnails/pic_7.jpg" /></td>
+                        </tr>
+                        <tr>
+                            <td class="photo"><img src="./src-img/thumbnails/pic_8.jpg" /></td>
+                            <td class="photo"><img src="./src-img/thumbnails/pic_9.jpg" /></td>
+                            <td class="photo"><img src="./src-img/thumbnails/pic_10.jpg" /></td>
+                            <td class="photo"><img src="./src-img/thumbnails/pic_11.jpg" /></td>
+                            <td class="photo"><img src="./src-img/thumbnails/pic_12.jpg" /></td>
+                            <td class="photo"><img src="./src-img/thumbnails/pic_13.jpg" /></td>
+                            <td class="photo"><img src="./src-img/thumbnails/pic_14.jpg" /></td>
+                            <td class="photo"><img src="./src-img/thumbnails/pic_15.jpg" /></td>
+                        </tr>
+                        <tr>
+                            <td class="photo"><img src="./src-img/thumbnails/pic_16.jpg" /></td>
+                            <td class="photo"><img src="./src-img/thumbnails/pic_17.jpg" /></td>
+                            <td class="photo"><img src="./src-img/thumbnails/pic_18.jpg" /></td>
+                            <td class="photo"><img src="./src-img/thumbnails/pic_19.jpg" /></td>
+                            <td class="photo"><img src="./src-img/thumbnails/pic_20.jpg" /></td>
+                            <td class="photo"><img src="./src-img/thumbnails/pic_21.jpg" /></td>
+                            <td class="photo"><img src="./src-img/thumbnails/pic_22.jpg" /></td>
+                            <td class="photo"><img src="./src-img/thumbnails/pic_23.jpg" /></td>
+                        </tr>
+                        <tr>
+                            <td class="photo"><img src="./src-img/thumbnails/pic_24.jpg" /></td>
+                            <td class="photo"><img src="./src-img/thumbnails/pic_25.jpg" /></td>
+                            <td class="photo"><img src="./src-img/thumbnails/pic_26.jpg" /></td>
+                            <td class="photo"><img src="./src-img/thumbnails/pic_27.jpg" /></td>
+                            <td class="photo"><img src="./src-img/thumbnails/pic_28.jpg" /></td>
+                            <td class="photo"><img src="./src-img/thumbnails/pic_29.jpg" /></td>
+                            <td class="photo"><img src="./src-img/thumbnails/pic_30.jpg" /></td>
+                            <td class="photo"><img src="./src-img/thumbnails/pic_31.jpg" /></td>
+                        </tr>
+                        
+                        <tr>
+                            <td class="photo"><img src="./src-img/thumbnails/pic_32.jpg" /></td>
+                            <td class="photo"><img src="./src-img/thumbnails/pic_33.jpg" /></td>
+                            <td class="photo"><img src="./src-img/thumbnails/pic_34.jpg" /></td>
+                            <td class="photo"><img src="./src-img/thumbnails/pic_35.jpg" /></td>
+                            <td class="photo"><img src="./src-img/thumbnails/pic_36.jpg" /></td>
+                            <td class="photo"><img src="./src-img/thumbnails/pic_37.jpg" /></td>
+                            <td class="photo"><img src="./src-img/thumbnails/pic_38.jpg" /></td>
+                            <td class="photo"><img src="./src-img/thumbnails/pic_39.jpg" /></td>
+                            
+                        </tr>
+
+                        
+                        
+                    </table>
+                </form>
+                <form method="POST" action="getdata.php" enctype="multipart/form-data">
+                    <input type="file" name="myimage">
+                    <input type="submit" name="submit_image" value="Upload">
+                </form>
+
+            </div>
+        </div>
+        <p>
+
+
+
+        </p>
+        <script>
+         var photohighlighted=[];
+         $(document).ready(function(){
+             $('#availableEffects').hide();             
+             $('#oneEffectOnly').hide();
+             $('td.photo').click(function(){
+
+                 if($('#photoSelectedShown tr td').length<6){
+                     $('#photoSelectedShown tr:eq(0)').append("<td>"+$(this).html()+"</td>");
+                     var fullPhotoString=$(this).children().attr("src");
+                     var fullPhotoString=fullPhotoString.replace('./src-img/thumbnails/','');
+                     $('#photoSelected').append("<option selected>"+fullPhotoString+"</option>");
+                     $('#photoSelectedOne').attr("value",fullPhotoString);
+                     if($('#photoSelectedShown tr:eq(0) td').length==1){
+                         $('#availableEffects').show();
+                         $('#oneEffectOnly').show();
+                     }else{
+                         $('#availableEffects').hide();
+                         $('#oneEffectOnly').hide();
+                     }
+                 }
+             });
+
+         });
+         
+         
+
+
+        </script>
+    </body> 
+</html>
+
+
+
+
