@@ -16,7 +16,7 @@
 
 
 
-                    <a href="./simulacram.html" class="button button-primary">Try again</a>
+                    <a href="./index.html" class="button button-primary">Try again</a>
 
 
 
